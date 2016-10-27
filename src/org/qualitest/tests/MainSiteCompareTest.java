@@ -45,6 +45,5 @@ public class MainSiteCompareTest extends MainSiteStructure {
 		site.click();
 		site = driver.findElement(header);
 		Assert.assertTrue(site.getText().toString().contains(confirm));
-		CloseSite();
 	}
 }

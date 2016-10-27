@@ -23,5 +23,7 @@ public class Main {
 		// Run test case 2
 		data.setOurServicesdata();
 		comparetest.compareLinks(data.getElement1(), data.getElement2(), data.getHeader(), data.getConfirm());
+		
+		comparetest.CloseSite();
 	}
 }
