@@ -20,7 +20,7 @@ public class MainSiteCompareTest extends MainSiteStructure {
 	private WebDriver driver; 
 	
 	
-	// constructor to assign driver to MainSiteTest driver and set up the website
+	// constructor to assign driver to MainSiteTest driver
 	public MainSiteCompareTest(){ 
 		super.InitializeSite();
 		driver = super.getDriver();
@@ -35,11 +35,13 @@ public class MainSiteCompareTest extends MainSiteStructure {
 	public void compareLinks(By webelement1, By webelement2, By header, String confirm) throws InterruptedException{ 
 		driver.get(super.getURL());
 		
+		//local variables
 		WebElement site;
+		String title1, title2;
 
 		site = driver.findElement(webelement1);
-		System.out.println(site.getText());
 		site.click();
+		title1 = site.getText();
 		driver.navigate().back();
 		site = driver.findElement(webelement2);
 		site.click();
