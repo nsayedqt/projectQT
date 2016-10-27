@@ -23,7 +23,7 @@ public class MainSiteStructure extends Tests{
 		
 	}
 
-	/* Getter for URL
+	/* Getter for URL that will be used in test classes
 	 * 
 	 */
 	public String getURL() {

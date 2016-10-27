@@ -17,8 +17,8 @@ public class Main {
 		MainSiteData data = new MainSiteData();
 		
 		// Run test case 1
-		//data.setAboutUsdata();
-		//comparetest.compareLinks(data.getElement1(), data.getElement2(), data.getHeader(), data.getConfirm());
+		data.setAboutUsdata();
+		comparetest.compareLinks(data.getElement1(), data.getElement2(), data.getHeader(), data.getConfirm());
 		
 		// Run test case 2
 		data.setOurServicesdata();

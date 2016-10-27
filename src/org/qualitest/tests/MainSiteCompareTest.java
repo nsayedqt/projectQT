@@ -37,7 +37,7 @@ public class MainSiteCompareTest extends MainSiteStructure {
 		
 		WebElement site;
 
-		site = driver.findElement(By.cssSelector("div.inner div.primary-messaging ul li.nth-child(2)"));
+		site = driver.findElement(webelement1);
 		System.out.println(site.getText());
 		site.click();
 		driver.navigate().back();

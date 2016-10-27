@@ -27,7 +27,6 @@ public abstract class Tests {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Qualitest\\Downloads\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
-		//driver.get(URL);	
 	}
 	
 	

@@ -21,7 +21,7 @@ public class MainSiteData {
 	public void setOurServicesdata(){
 		this.element1 = By.xpath("/html/body/div[1]/div/section[1]/div[1]/div/ul/li[2]/a");
 				
-		this.element2 = By.cssSelector("div.inner div.primary-messaging ul li.nth-child(2) a[href='https://www.qualitestgroup.com/solutions-overview/software-testing-services/']");
+		this.element2 = By.cssSelector("div.inner div.primary-messaging a[href='https://www.qualitestgroup.com/solutions-overview/software-testing-services/']");
 		this.header = By.xpath("/html/body/div[1]/div/section/div/h1");
 		this.confirm = "Software Testing Services";
 	}
