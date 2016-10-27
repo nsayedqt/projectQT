@@ -38,13 +38,19 @@ public class MainSiteCompareTest extends MainSiteStructure {
 		//local variables
 		WebElement site;
 		String title1, title2;
-
+		
+		// goto first link
 		site = driver.findElement(webelement1);
 		site.click();
+		
+		// save title in string
 		title1 = site.getText();
+		
+		// go back to home page to then navigate to the second link
 		driver.navigate().back();
 		site = driver.findElement(webelement2);
 		site.click();
+		
 		site = driver.findElement(header);
 		Assert.assertTrue(site.getText().toString().contains(confirm));
 	}
