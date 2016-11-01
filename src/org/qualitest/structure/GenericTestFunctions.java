@@ -103,8 +103,6 @@ public abstract class GenericTestFunctions {
  
 		{
 			//connect to the webserver
-			connection.setRequestMethod("GET");
-			connection.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.1; WOW64) Chrome/23.0.1271.95");
 		    connection.connect();
 		    
 		    //record the response (determines whether link is broken or valid
