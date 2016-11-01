@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="11486" started-at="2016-10-27T18:43:29Z" finished-at="2016-10-27T18:43:40Z">
+  <suite name="Default suite" duration-ms="22542" started-at="2016-11-01T20:56:34Z" finished-at="2016-11-01T20:56:56Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="11486" started-at="2016-10-27T18:43:29Z" finished-at="2016-10-27T18:43:40Z">
+    <test name="Default test" duration-ms="22542" started-at="2016-11-01T20:56:34Z" finished-at="2016-11-01T20:56:56Z">
       <class name="org.qualitest.calling_module.NewTest">
-        <test-method status="PASS" signature="Intro()[pri:0, instance:org.qualitest.calling_module.NewTest@402f32ff]" name="Intro" is-config="true" duration-ms="13" started-at="2016-10-27T11:43:29Z" finished-at="2016-10-27T11:43:29Z">
+        <test-method status="PASS" signature="Intro()[pri:0, instance:org.qualitest.calling_module.NewTest@402f32ff]" name="Intro" is-config="true" duration-ms="9" started-at="2016-11-01T13:56:34Z" finished-at="2016-11-01T13:56:34Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Intro -->
-        <test-method status="PASS" signature="f()[pri:0, instance:org.qualitest.calling_module.NewTest@402f32ff]" name="f" duration-ms="11445" started-at="2016-10-27T11:43:29Z" finished-at="2016-10-27T11:43:40Z">
+        <test-method status="PASS" signature="f()[pri:0, instance:org.qualitest.calling_module.NewTest@402f32ff]" name="f" duration-ms="22506" started-at="2016-11-01T13:56:34Z" finished-at="2016-11-01T13:56:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method status="PASS" signature="Outro()[pri:0, instance:org.qualitest.calling_module.NewTest@402f32ff]" name="Outro" is-config="true" duration-ms="1" started-at="2016-10-27T11:43:40Z" finished-at="2016-10-27T11:43:40Z">
+        <test-method status="PASS" signature="Outro()[pri:0, instance:org.qualitest.calling_module.NewTest@402f32ff]" name="Outro" is-config="true" duration-ms="1" started-at="2016-11-01T13:56:56Z" finished-at="2016-11-01T13:56:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Outro -->

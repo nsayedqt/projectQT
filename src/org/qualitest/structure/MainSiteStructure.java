@@ -7,7 +7,7 @@
 
 package org.qualitest.structure;
 
-public class MainSiteStructure extends Tests{
+public class MainSiteStructure extends GenericTestFunctions{
 	
 	// local variables
 	private String URL = "https://www.qualitestgroup.com/";

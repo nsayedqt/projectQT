@@ -7,23 +7,28 @@
 
 package org.qualitest.calling_module;
 import org.qualitest.data.MainSiteData;
-import org.qualitest.tests.MainSiteCompareTest;
+import org.qualitest.tests.MainSiteTests;
 
 public class Main {
 
 	public void MainSiteTest() throws InterruptedException{
 		// Create test object
-		MainSiteCompareTest comparetest = new MainSiteCompareTest();
+		MainSiteTests mainsitetest = new MainSiteTests();
 		MainSiteData data = new MainSiteData();
 		
-		// Run test case 1
+		// Run comparison test case 1
 		data.setAboutUsdata();
-		comparetest.compareLinks(data.getElement1(), data.getElement2(), data.getHeader(), data.getConfirm());
+		mainsitetest.compareLinks(data.getElement1(), data.getElement2(), data.getHeader(), data.getConfirm());
 		
-		// Run test case 2
+		// Run comparison test case 2
 		data.setOurServicesdata();
-		comparetest.compareLinks(data.getElement1(), data.getElement2(), data.getHeader(), data.getConfirm());
+		mainsitetest.compareLinks(data.getElement1(), data.getElement2(), data.getHeader(), data.getConfirm());
 		
-		comparetest.CloseSite();
+		
+		// Run broken links test case 1
+		mainsitetest.brokenLinks();
+		
+		
+		mainsitetest.CloseSite();
 	}
 }
