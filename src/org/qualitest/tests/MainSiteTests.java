@@ -60,10 +60,14 @@ public class MainSiteTests extends MainSiteStructure {
 		
 		
 		Assert.assertTrue(site.getText().toString().contains(confirm));
-		System.out.println(title1 + " =? " + title2);
+		System.out.println("Testing pages: \n" + title1 + " == " + title2);
 		//Assert.assertTrue(title1.equals(title2));
 	}
 	
+	/* Method that will get all the links on the page, and output whether the link is clickable or broken
+	 *  @params void
+	 *  @return void
+	 */
 	public void brokenLinks(){
 		driver.get(super.getURL());
 		
@@ -78,7 +82,7 @@ public class MainSiteTests extends MainSiteStructure {
 
 		    	{
 
-			        System.out.println("URL: " + element.getAttribute("href")+ " returned " + isLinkBroken(new java.net.URL(element.getAttribute("href"))));
+			        System.out.println("Testing URL: " + element.getAttribute("href")+ " | return status: " + isLinkBroken(new java.net.URL(element.getAttribute("href"))));
 
 		    		//System.out.println("URL: " + element.getAttribute("outerhtml")+ " returned " + isLinkBroken(new URL(element.getAttribute("href"))));
 
