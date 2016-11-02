@@ -6,6 +6,8 @@
  */
 
 package org.qualitest.tests;
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,14 +16,14 @@ import org.qualitest.data.MainSiteData;
 import org.qualitest.structure.MainSiteStructure;
 import org.testng.Assert;
 
-public class MainSiteCompareTest extends MainSiteStructure {
+public class MainSiteTests extends MainSiteStructure {
 	
 	// driver specific to the main site
 	private WebDriver driver; 
 	
 	
 	// constructor to assign driver to MainSiteTest driver
-	public MainSiteCompareTest(){ 
+	public MainSiteTests(){ 
 		super.InitializeSite();
 		driver = super.getDriver();
 	}
@@ -38,14 +40,58 @@ public class MainSiteCompareTest extends MainSiteStructure {
 		//local variables
 		WebElement site;
 		String title1, title2;
-
+		
+		// goto first link
 		site = driver.findElement(webelement1);
 		site.click();
-		title1 = site.getText();
+		
+		// save title in string from first link
+		site = driver.findElement(header);
+		title1 = site.getText().toString();
+		
+		// go back to home page to then navigate to the second link
 		driver.navigate().back();
 		site = driver.findElement(webelement2);
 		site.click();
+		
+		// save title in string from second link
 		site = driver.findElement(header);
+		title2 = site.getText();
+		
+		
 		Assert.assertTrue(site.getText().toString().contains(confirm));
+		System.out.println(title1 + " =? " + title2);
+		//Assert.assertTrue(title1.equals(title2));
+	}
+	
+	public void brokenLinks(){
+		driver.get(super.getURL());
+		
+		
+		 List<WebElement> allImages = findAllLinks(driver);    
+		 
+		    System.out.println("Total number of elements found " + allImages.size());
+
+		    for( WebElement element : allImages){
+
+		    	try
+
+		    	{
+
+			        System.out.println("URL: " + element.getAttribute("href")+ " returned " + isLinkBroken(new java.net.URL(element.getAttribute("href"))));
+
+		    		//System.out.println("URL: " + element.getAttribute("outerhtml")+ " returned " + isLinkBroken(new URL(element.getAttribute("href"))));
+
+		    	}
+
+		    	catch(Exception exp)
+
+		    	{
+
+		    		System.out.println("At " + element.getAttribute("innerHTML") + " Exception occured -&gt; " + exp.getMessage());	    		
+
+		    	}
+
+		    }
 	}
 }

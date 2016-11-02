@@ -8,7 +8,7 @@
 
 package org.qualitest.structure;
 
-public class BlogSiteStructure extends Tests {
+public class BlogSiteStructure extends GenericTestFunctions {
 	
 	// local variables
 	private String URL = "https://www.qualitestgroup.com/blog/";
